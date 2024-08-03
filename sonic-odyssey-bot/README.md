@@ -1,6 +1,6 @@
 # Sonic Odyssey Bot
 
-Sonic Odyssey Bot is an application designed for interacting with the Sonic Odyssey platform. It supports multiple features including sending SOL (Solana) cryptocurrency transactions, claiming rewards, opening mystery boxes, and daily login operations.
+Sonic Odyssey Bot is an application designed to interact with the Sonic Odyssey platform. It supports various features including sending SOL (Solana) cryptocurrency transactions, claiming rewards, opening mystery boxes, and daily login operations. The bot has been modified to run continuously for 24 hours.
 
 ## Features
 
@@ -23,7 +23,7 @@ Sonic Odyssey Bot is an application designed for interacting with the Sonic Odys
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dante4rt/sonic-odyssey-bot.git
+   git clone https://github.com/0xdkcvd/NanaNunu-Bot/sonic-odyssey-bot.git
    ```
 
 2. Navigate into the project directory:
@@ -42,22 +42,13 @@ Sonic Odyssey Bot is an application designed for interacting with the Sonic Odys
 
 4. Prepare input files:
 
-   - Create `accounts.json` with an array of seed phrases.
    - Create `privateKeys.json` with an array of private keys (base58 encoded).
-
-   Example `accounts.json`:
-   ```json
-   [
-     "seed_phrase_1",
-     "seed_phrase_2"
-   ]
-   ```
 
    Example `privateKeys.json`:
    ```json
    [
-     "base58_private_key_1",
-     "base58_private_key_2"
+     "your_private_key_1",
+     "your_private_key_2"
    ]
    ```
 
@@ -85,14 +76,6 @@ Follow the prompts to:
    - 1: Claim Box
    - 2: Open Box
    - 3: Daily Login
-
-## Donations
-
-If you would like to support the development of this project, you can make a donation using the following addresses:
-
-- **Solana**: `GLQMG8j23ookY8Af1uLUg4CQzuQYhXcx56rkpZkyiJvP`
-- **EVM**: `0x960EDa0D16f4D70df60629117ad6e5F1E13B8F44`
-- **BTC**: `bc1p9za9ctgwwvc7amdng8gvrjpwhnhnwaxzj3nfv07szqwrsrudfh6qvvxrj8`
 
 ## Contributing
 
