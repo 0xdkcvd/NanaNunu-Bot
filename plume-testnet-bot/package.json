@@ -1,0 +1,34 @@
+{
+  "name": "plume-testnet",
+  "version": "2.2.0",
+  "description": "Script All In One for Plume Testnet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Prastian Hidayat",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrastianHD/plume-testnet.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@crocswap-libs/sdk": "^1.0.2",
+    "axios": "^1.7.2",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "fs": "^0.0.1-security",
+    "https-proxy-agent": "^7.0.5",
+    "moment": "^2.30.1",
+    "readline-sync": "^1.4.10",
+    "socks-proxy-agent": "^8.0.4",
+    "uuid": "^10.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/PrastianHD/plume-testnet/issues"
+  },
+  "homepage": "https://github.com/PrastianHD/plume-testnet#readme"
+}
