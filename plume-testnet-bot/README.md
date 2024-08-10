@@ -1,9 +1,3 @@
-# Plume Testnet Script
-
-![logo](./utils/plume-testnet.png)
-## Join
-https://miles.plumenetwork.xyz/join?invite=PLUME-6KCXQ
-
 ## Menu Explanation
 ### Menu[1] Check-In
 - After doing CheckIn, each wallet will claim NEST STAKING rewards
@@ -32,15 +26,8 @@ https://miles.plumenetwork.xyz/join?invite=PLUME-6KCXQ
 - After 1 hour delay, each wallet will create RWA tokens and Claim ETH Faucet.
 - Then delay again for 1 hour which will return to the previous Task
 
-Penjelasan dalam bahasa Indonesia : [DISINI!](https://github.com/PrastianHD/plume-testnet/blob/main/READINDO.md)
 
 ## Installation 
-### Clone Repositori
-```
-git clone https://github.com/PrastianHD/plume-testnet.git
-cd plume-testnet
-```
-
 ### Instal Dependensi
 ```
 npm install
@@ -60,9 +47,7 @@ MAX_SWAP=0.1
 ### Konfigurasi Proxy di proxy.txt
 ```bash
 # Format Proxy - username:password:host:port
- 
-skrstvca:qwo3xoup86cg:204.44.69.89:6342
-```
+ ```
 
 ### Run script
 ```
