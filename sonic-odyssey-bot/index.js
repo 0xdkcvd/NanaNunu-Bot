@@ -1,6 +1,7 @@
 const fs = require('fs');
 const readlineSync = require('readline-sync');
 const colors = require('colors');
+const cron = require('node-cron');
 
 const {
   sendSol,
@@ -14,7 +15,7 @@ const {
 
 const { displayHeader } = require('./src/displayUtils');
 
-// Fungsi untuk menjalankan proses utama
+
 const runProcess = async () => {
   displayHeader();
 
@@ -49,10 +50,10 @@ const runProcess = async () => {
   }
 
   const amountToSend = 0.001; // Default amount to send
-  const delayBetweenTx = 1000; // Default delay between transactions in milliseconds
+  const delayBetweenTx = 2000; // Default delay between transactions in milliseconds
 
   for (const [index, privateKey] of seedPhrasesOrKeys.entries()) {
-    let successfulTxCount = 0; // Penomoran dimulai dari awal untuk setiap akun
+    let successfulTxCount = 0; 
 
     const fromKeypair = getKeypairFromPrivateKey(privateKey);
     console.log(
@@ -80,14 +81,18 @@ const runProcess = async () => {
     }
   }
 
-  // Setelah semua proses selesai, jadwalkan untuk menjalankan kembali setelah 24 jam
-  const nextRun = new Date();
-  nextRun.setDate(nextRun.getDate() + 1); // Tambah 1 hari
-  console.log(colors.yellow(`Next run scheduled at: ${nextRun}`));
 
-  // Menunggu selama 24 jam sebelum menjalankan proses lagi
-  setTimeout(runProcess, 24 * 60 * 60 * 1000); // 24 jam dalam milidetik
+  const nextRunDate = new Date(Date.now() + 24 * 60 * 60 * 1000); 
+  console.log(colors.yellow(`Next run scheduled at: ${nextRunDate.toUTCString()} UTC`));
 };
 
-// Jalankan proses pertama kali
+
 runProcess();
+
+// Schedule the process to run every day at 00:30 UTC
+cron.schedule('30 0 * * *', runProcess);
+
+// Add a notification 1 hour before the next run
+cron.schedule('0 23 * * *', () => {
+  console.log(colors.yellow(`Script will run again in 1 hour!`));
+});
